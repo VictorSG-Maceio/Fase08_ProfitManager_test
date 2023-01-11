@@ -1,1 +1,1 @@
-web: bundle install && rails db:migrate && rails server -b 0.0.0.0 -p {PORT: -3000}
+web: /bin/rails db:migrate && /bin/rails server -b 0.0.0.0 -p {PORT:-3000}
