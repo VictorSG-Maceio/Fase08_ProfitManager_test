@@ -6,9 +6,8 @@ Rails.application.routes.draw do
       resources :expenses
       devise_for :users, controllers: { sessions: "api/v1/sessions" }      
     end
-    namespace :v2 do
+    namespace :v2, defaults: { format: :json } do
       mount_devise_token_auth_for 'User', at: 'auth'
-      resources :users
       resources :gains
       resources :expenses
     end
